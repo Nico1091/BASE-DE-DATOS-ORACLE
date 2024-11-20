@@ -1,0 +1,16 @@
+SELECT id_grupo, NOMBRE
+FROM grupo
+GROUP BY id_grupo, NOMBRE;
+
+SELECT id_facultad
+FROM facultad
+WHERE nombre LIKE '%a%';
+
+SELECT departamento.nombre, estudiante.nombre
+FROM departamento
+JOIN estudiante ON estudiante.id_departamento = departamento.id_departamento;
+
+SELECT grupo.nombre, inscripcion.codigo_estudiante, estudiante.nombre
+FROM inscripcion
+JOIN grupo ON inscripcion.id_grupo = grupo.id_grupo
+JOIN estudiante ON inscripcion.codigo_estudiante = estudiante.codigo_estudiante;
